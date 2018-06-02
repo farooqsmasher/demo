@@ -19,12 +19,14 @@ public class Hello{
         ArrayList<Awsservice> li =obj1.getall();
   
         for(Awsservice te : li){
-            if(te.getServiceId() ==2){
+            if(te.getName().contains("c"))
+                {
                System.out.println(te);
             }
         } 
     }
-public static void main(String[] args) {
+
+ public static void main(String[] args) {
     System.out.println(test());
 
     
@@ -34,12 +36,18 @@ public static void main(String[] args) {
        ob.setServiceId(3);
        ob.setDescription("infa as the code");
        obj.addAll(ob);    
-       ArrayList<Awsservice> li3 =obj.getall();
+       ArrayList<Awsservice> li3 =obj.getbyName("");
        for (Awsservice var1 : li3) {
            System.out.println(var1);
            
        }        
-        lisbyid();
+       System.out.println("found at "+obj.getbyid(2));
+      
+
+      // lisbyid();
+
+
+
 
     }
 }

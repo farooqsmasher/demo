@@ -1,6 +1,7 @@
 package com.myProject.repository;
 
 import com.myProject.model.Awsservice;
+
 import java.util.ArrayList;
 
 
@@ -26,7 +27,7 @@ public static ArrayList<Awsservice> testdb = new ArrayList<Awsservice>();
    }
    
    public ArrayList<Awsservice> getall(){
-       
+    
        return testdb;
    }
     
@@ -34,8 +35,30 @@ public static ArrayList<Awsservice> testdb = new ArrayList<Awsservice>();
    testdb.add(awsservice); 
    
    }
+  
+ public Awsservice getbyid(int id){
+        
+    for(Awsservice li : testdb){
+       if(li.getServiceId() == id){
+          return li;
+       }
 
-
+    }
+    return null;
+ }
+ public ArrayList<Awsservice> getbyName(String name){
+  
+     ArrayList<Awsservice> nList = new ArrayList<Awsservice>();
+     
+     for (Awsservice li : testdb) {
+         if(li.getName().contains(name)){
+             nList.add(li);
+         }
+         
+     }
+    
+    return nList;
+}
    
 }  
 
