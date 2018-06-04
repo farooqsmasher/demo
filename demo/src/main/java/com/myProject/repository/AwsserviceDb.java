@@ -33,8 +33,7 @@ public static ArrayList<Awsservice> testdb = new ArrayList<Awsservice>();
     
    public void addAll(Awsservice awsservice){
    testdb.add(awsservice); 
-   
-   }
+    }
   
  public Awsservice getbyid(int id){
         
@@ -59,7 +58,12 @@ public static ArrayList<Awsservice> testdb = new ArrayList<Awsservice>();
     
     return nList;
 }
-   
+
+public void addAllList(ArrayList<Awsservice> li1 ) {
+
+    testdb.addAll(li1);
+    
+}
 }  
 
 

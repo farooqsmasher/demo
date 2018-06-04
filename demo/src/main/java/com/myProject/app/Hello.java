@@ -35,14 +35,16 @@ public class Hello{
        ob.setName("cfn");
        ob.setServiceId(3);
        ob.setDescription("infa as the code");
-       obj.addAll(ob);    
+       obj.addAll(ob);
+       
+       
        ArrayList<Awsservice> li3 =obj.getbyName("");
        for (Awsservice var1 : li3) {
            System.out.println(var1);
            
        }        
        System.out.println("found at "+obj.getbyid(2));
-      
+      obj.addAllList(li3);
 
       // lisbyid();
 
