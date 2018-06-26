@@ -15,8 +15,7 @@ pipeline {
        stage('Testing') {
             steps {
                 sh 'mvn test'
-               def mvnHome = tool 'Maven 3.0.5'
-               print targetVersion
+               
             }
             post {
                 always {
