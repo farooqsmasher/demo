@@ -15,7 +15,7 @@ pipeline {
        stage('Testing') {
             steps {
                 sh 'mvn test'
-               echo 'Pulling...' + env.BRANCH_NAME
+               def mvnHome = tool 'Maven 3.0.5'
             }
             post {
                 always {
