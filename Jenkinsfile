@@ -15,5 +15,7 @@ pipeline {
             steps {
                 sh 'echo "deploy"'
             }
+        }   
+     
     }
 }
