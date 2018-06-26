@@ -9,9 +9,7 @@ pipeline {
        stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : '3.0.5') {
-                    sh 'mvn clean compile'
-                }
+                sh 'mvn clean compile'
             }
         }
         stage('deploy') {
