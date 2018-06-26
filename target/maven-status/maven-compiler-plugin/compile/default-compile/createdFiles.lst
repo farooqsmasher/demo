@@ -1,0 +1,6 @@
+com/myProject/model/Employee.class
+com/myProject/app/Hello.class
+com/myProject/model/Awsservice.class
+com/myProject/repository/EmpDb.class
+com/myProject/app/App.class
+com/myProject/repository/AwsserviceDb.class
