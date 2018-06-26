@@ -15,7 +15,7 @@ pipeline {
        stage('Testing') {
             steps {
                 sh 'mvn test'
-               
+               echo 'Pulling...' + env.BRANCH_NAME
             }
             post {
                 always {
