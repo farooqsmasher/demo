@@ -3,11 +3,15 @@ pipeline {
 
     stages {
         stage('Build') {
+        
             steps {
-                sh 'mvn clean compile'
+                withMaven(maven : 'maven_3_5_0') {
+                    sh 'mvn clean compile'
+                }
             }
-        }
-        stage('Test') {
+}
+
+         stage('Test') {
             steps {
                 echo 'Testing..'
             }
