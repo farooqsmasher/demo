@@ -12,11 +12,16 @@ pipeline {
                 sh 'mvn clean compile'
             }
         }
-        stage('deploy') {
+       stage('Testing') {
             steps {
-                sh 'mvn deploy'
+                sh 'mvn test'
             }
-        }   
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }  
      
     }
 }
