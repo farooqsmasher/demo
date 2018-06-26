@@ -15,6 +15,8 @@ pipeline {
        stage('Testing') {
             steps {
                 sh 'mvn test'
+                def targetVersion = getDevVersion()
+                print targetVersion
             }
             post {
                 always {
