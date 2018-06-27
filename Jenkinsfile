@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                timeout(time: 5, units: 'MINUTES'){
                 sh 'mvn test'
+                }
             }
         }
        stage ('Compile Stage') {
